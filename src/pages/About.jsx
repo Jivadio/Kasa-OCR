@@ -3,7 +3,7 @@ import Dropdown from "../components/Dropdown";
 
 const About = () => {
   return (
-    <div>
+    <div className="p-5 sm:p-0">
       <Banner background="about_background.png" />
       <div className="space-y-8 my-9">
         <Dropdown

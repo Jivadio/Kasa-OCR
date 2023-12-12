@@ -21,14 +21,14 @@ export default function Dropdown({ question, answer, className }) {
       return (
         <ul>
           {answer.map((item, index) => (
-            <li key={index} className="text-[#FF6060]">
+            <li key={index} className="text-[#FF6060] text-xs sm:text-lg">
               {item}
             </li>
           ))}
         </ul>
       );
     }
-    return <p className="text-[#FF6060]">{answer}</p>;
+    return <p className="text-[#FF6060] text-xs sm:text-lg">{answer}</p>;
   };
 
   return (
@@ -40,7 +40,7 @@ export default function Dropdown({ question, answer, className }) {
           className="flex items-center justify-between"
           onClick={toggleDropdown}
         >
-          <h2 className="text-white text-lg">{question}</h2>
+          <h2 className="text-white text-xs sm:text-2xl">{question}</h2>
           {isOpen ? (
             <ChevronUpIcon className="text-white w-8" />
           ) : (
