@@ -32,7 +32,7 @@ const Accomodation = () => {
           </div>
         </div>
         <div className="flex items-center sm:items-end space-x-2.5 mt-2 sm:mt-0 sm:flex-col-reverse justify-between sm:justify-normal w-full sm:w-auto">
-          <Stars rating={logement.rating} />
+          <Stars rating={Number(logement.rating)} />
           <div className="flex items-center space-x-2.5">
             <p className="text-[#FF6060] text-xs sm:text-lg">
               {logement.host.name}

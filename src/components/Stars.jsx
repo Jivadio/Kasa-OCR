@@ -8,9 +8,9 @@ Stars.propTypes = {
 export default function Stars({ rating }) {
   const stars = Array.from({ length: 5 }, (_, index) => {
     return index < rating ? (
-      <StarIcon className="text-[#FF6060] w-4 sm:w-9 h-4 sm:h-9" />
+      <StarIcon key={index} className="text-[#FF6060] w-4 sm:w-9 h-4 sm:h-9" />
     ) : (
-      <StarIcon className="text-[#E3E3E3] w-4 sm:w-9 h-4 sm:h-9" />
+      <StarIcon key={index} className="text-[#E3E3E3] w-4 sm:w-9 h-4 sm:h-9" />
     );
   });
 
