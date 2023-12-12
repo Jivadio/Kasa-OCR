@@ -17,7 +17,9 @@ export default function Banner({ background, title }) {
       style={bannerStyle}
     >
       <div className="z-10">
-        <h1 className="text-5xl text-white">{title}</h1>
+        <h1 className="text-2xl sm:text-5xl text-white px-4 py-8 sm:px-0 sm:py-0">
+          {title}
+        </h1>
       </div>
     </div>
   );
