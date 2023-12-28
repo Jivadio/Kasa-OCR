@@ -16,14 +16,9 @@ export default function Card({ title, image, id }) {
 
   return (
     <Link to={`/accomodation/${id}`}>
-      <div className="w-full relative">
-        <div
-          className="w-full rounded-lg"
-          style={{ paddingTop: "100%", ...backgroundImageStyle }}
-        >
-          <div className="text-white px-5 pb-5 absolute bottom-0 left-0 right-0 text-lg">
-            {title}
-          </div>
+      <div className="card-container">
+        <div className="card-background" style={backgroundImageStyle}>
+          <div className="card-title">{title}</div>
         </div>
       </div>
     </Link>

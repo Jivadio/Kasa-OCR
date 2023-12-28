@@ -7,12 +7,13 @@ Stars.propTypes = {
 
 export default function Stars({ rating }) {
   const stars = Array.from({ length: 5 }, (_, index) => {
-    return index < rating ? (
-      <StarIcon key={index} className="text-[#FF6060] w-4 sm:w-9 h-4 sm:h-9" />
-    ) : (
-      <StarIcon key={index} className="text-[#E3E3E3] w-4 sm:w-9 h-4 sm:h-9" />
+    return (
+      <StarIcon
+        key={index}
+        className={`star-icon ${index < rating ? "star-icon-active" : ""}`}
+      />
     );
   });
 
-  return <div className="flex sm:mt-14">{stars}</div>;
+  return <div className="stars-container">{stars}</div>;
 }

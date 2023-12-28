@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Banner Component */
+.banner-container {
+  width: 100%;
+  margin: 0 auto;
+  height: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
 .banner-overlay::before {
   content: "";
   position: absolute;
@@ -11,5 +24,262 @@
   bottom: 0;
   background: rgba(0, 0, 0, 0.3);
   z-index: 1;
-  @apply rounded-3xl;
+  border-radius: 1.5rem;
+}
+
+.banner-title {
+  z-index: 10;
+  font-size: 1.25rem;
+  color: white;
+  padding: 1rem;
+}
+
+@media (min-width: 640px) {
+  .banner-container {
+    height: 14rem;
+  }
+  .banner-title {
+    font-size: 3rem;
+    padding: 0;
+  }
+}
+
+/* Card Component */
+
+.card-container {
+  width: 100%;
+  position: relative;
+}
+
+.card-background {
+  width: 100%;
+  border-radius: 0.5rem;
+  position: relative;
+  padding-top: 100%;
+}
+
+.card-title {
+  color: white;
+  padding: 1.25rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 1.125rem;
+}
+
+/* Dropdown Component */
+
+.dropdown-container {
+  background-color: #ff6060;
+  border-radius: 0.5rem;
+  padding: 0.625rem;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.dropdown-title {
+  color: white;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown-icon {
+  color: white;
+  width: 2rem;
+}
+
+.dropdown-content {
+  background-color: #f6f6f6;
+  border-radius: 0.5rem;
+  padding: 0.625rem;
+  margin: 0 auto;
+}
+
+.dropdown-text {
+  color: #ff6060;
+  font-size: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .dropdown-title {
+    font-size: 1.5rem;
+  }
+  .dropdown-text {
+    font-size: 1.125rem;
+  }
+}
+
+/* Footer Component */
+
+.footer-container {
+  width: 100%;
+  background-color: black;
+  padding: 2rem;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer-logo {
+  width: 8rem;
+}
+
+.footer-text {
+  color: white;
+  font-size: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .footer-text {
+    font-size: 1.5rem;
+  }
+}
+
+/* Gallery Component */
+
+.gallery-container {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  height: 255px;
+}
+
+.gallery-chevron {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.gallery-chevron--left {
+  left: 0;
+}
+
+.gallery-chevron--right {
+  right: 0;
+}
+
+.gallery-image {
+  border-radius: 1.5rem;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.gallery-pagination {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  padding: 1rem;
+  font-size: 1rem;
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .gallery-container {
+    height: 456px;
+  }
+  .gallery-chevron {
+    width: 4rem;
+  }
+  .gallery-pagination {
+    display: block;
+  }
+}
+
+/* Header Component */
+
+.header-container {
+  margin: 0 auto;
+  padding: 1.25rem 1.25rem;
+}
+
+.header-logo {
+  width: 9rem;
+}
+
+.header-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  color: #ff6060;
+  font-size: 0.75rem;
+}
+
+.header-link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header-link:hover,
+.header-link--active {
+  text-decoration: underline;
+}
+
+@media (min-width: 640px) {
+  .header-container {
+    padding: 3rem;
+  }
+  .header-logo {
+    width: 13rem;
+  }
+  .header-links {
+    gap: 3.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+/* Stars Component */
+.stars-container {
+  display: flex;
+  margin-top: 0;
+}
+
+.star-icon {
+  width: 1rem;
+  height: 1rem;
+  color: #e3e3e3;
+}
+
+.star-icon-active {
+  color: #ff6060;
+}
+
+@media (min-width: 640px) {
+  .stars-container {
+    margin-top: 3.5rem;
+  }
+  .star-icon {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}
+
+/* Tag Component */
+.tag-container {
+  background-color: #ff6060;
+  color: white;
+  padding: 0.125rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  display: inline;
+}
+
+@media (min-width: 640px) {
+  .tag-container {
+    padding: 0.125rem 1.25rem;
+    font-size: 1rem;
+  }
 }

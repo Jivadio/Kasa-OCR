@@ -21,39 +21,33 @@ export default function Dropdown({ question, answer, className }) {
       return (
         <ul>
           {answer.map((item, index) => (
-            <li key={index} className="text-[#FF6060] text-xs sm:text-lg">
+            <li key={index} className="dropdown-text">
               {item}
             </li>
           ))}
         </ul>
       );
     }
-    return <p className="text-[#FF6060] text-xs sm:text-lg">{answer}</p>;
+    return <p className="dropdown-text">{answer}</p>;
   };
 
   return (
     <div>
       <div
-        className={`bg-[#FF6060] container mx-auto rounded-lg p-2.5 cursor-pointer ${className}`}
+        className={`dropdown-container ${className}`}
+        onClick={toggleDropdown}
       >
-        <div
-          className="flex items-center justify-between"
-          onClick={toggleDropdown}
-        >
-          <h2 className="text-white text-xs sm:text-2xl">{question}</h2>
+        <div className="dropdown-title">
+          <h2>{question}</h2>
           {isOpen ? (
-            <ChevronUpIcon className="text-white w-8" />
+            <ChevronUpIcon className="dropdown-icon" />
           ) : (
-            <ChevronDownIcon className="text-white w-8" />
+            <ChevronDownIcon className="dropdown-icon" />
           )}
         </div>
       </div>
       {isOpen && (
-        <div
-          className={`bg-[#F6F6F6] container mx-auto rounded-b-lg p-2.5 ${className}`}
-        >
-          {renderAnswer()}
-        </div>
+        <div className={`dropdown-content ${className}`}>{renderAnswer()}</div>
       )}
     </div>
   );
