@@ -3,9 +3,9 @@ import Dropdown from "../components/Dropdown";
 
 const About = () => {
   return (
-    <div className="p-5 sm:p-0">
+    <div className="about-container">
       <Banner background="about_background.png" />
-      <div className="space-y-8 my-9">
+      <div className="dropdown-spacing">
         <Dropdown
           question="Fiabilité"
           answer="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam"

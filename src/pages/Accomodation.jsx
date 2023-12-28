@@ -15,41 +15,35 @@ const Accomodation = () => {
   }
 
   return (
-    <div className="container mx-auto px-5 mb-6">
+    <div className="accomodation-container">
       <Gallery images={logement.pictures} />
-      <div className="flex flex-col sm:flex-row items-center justify-between mt-5">
-        <div className="w-full sm:w-auto">
-          <h1 className="text-lg sm:text-4xl text-[#FF6060] mt-4 sm:mt-8">
-            {logement.title}
-          </h1>
-          <p className="text-[#FF6060] text-base sm:text-lg mt-1 sm:mt-0">
-            {logement.location}
-          </p>
-          <div className="flex items-center space-x-2.5 mt-2 sm:mt-5">
+      <div className="accomodation-info">
+        <div className="accomodation-info-title-container">
+          <h1 className="accomodation-info-title">{logement.title}</h1>
+          <p className="accomodation-info-location">{logement.location}</p>
+          <div className="accomodation-info-tags">
             {logement.tags.map((tag, index) => (
               <Tag key={index} name={tag} />
             ))}
           </div>
         </div>
-        <div className="flex items-center sm:items-end space-x-2.5 mt-2 sm:mt-0 sm:flex-col-reverse justify-between sm:justify-normal w-full sm:w-auto">
+        <div className="accomodation-info-host-container">
           <Stars rating={Number(logement.rating)} />
-          <div className="flex items-center space-x-2.5">
-            <p className="text-[#FF6060] text-xs sm:text-lg">
-              {logement.host.name}
-            </p>
+          <div className="accomodation-info-host">
+            <p className="accomodation-info-host-name">{logement.host.name}</p>
             <img
               src={logement.host.picture}
               alt="avatar"
-              className="w-8 sm:w-16 rounded-full"
+              className="accomodation-info-host-picture"
             />
           </div>
         </div>
       </div>
-      <div className="flex sm:flex-row flex-col space-y-6 sm:space-y-0 sm:space-x-20 mt-6">
-        <div className="w-full sm:w-1/2">
+      <div className="dropdown-section">
+        <div className="dropdown-section-item">
           <Dropdown question="Description" answer={logement.description} />
         </div>
-        <div className="w-full sm:w-1/2">
+        <div className="dropdown-section-item">
           <Dropdown question="Equipements" answer={logement.equipments} />
         </div>
       </div>

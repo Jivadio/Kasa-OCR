@@ -1,14 +1,13 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 const E404 = () => {
   return (
-    <div className="container mx-auto text-center text-[#FF6060] space-y-28 sm:space-y-32  py-28 sm:py-32">
-      <h1 className="font-bold text-8xl sm:text-[288px]">404</h1>
-      <p className="text-lg sm:text-4xl">
+    <div className="e404-container">
+      <h1 className="e404-title">404</h1>
+      <p className="e404-text">
         Oups! La page que vous demandez n’existe pas.
       </p>
-      <Link to="/" className="text-xs sm:text-lg hover:underline block">
+      <Link to="/" className="e404-link">
         Retourner sur la page d’accueil
       </Link>
     </div>
