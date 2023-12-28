@@ -7,7 +7,7 @@ const Header = () => {
 
   return (
     <div className="header-container">
-      <div className="flex items-center justify-between">
+      <div className="header-logo-container">
         <img src="/logo.svg" alt="logo" className="header-logo" />
         <div className="header-links">
           <Link
