@@ -12,7 +12,8 @@ a:visited {
   color: inherit;
 }
 
-ul,li {
+ul,
+li {
   list-style: none;
 }
 
@@ -48,12 +49,22 @@ ul,li {
   padding: 1rem;
 }
 
+.banner-title h1 {
+  font-size: 24px;
+  color: white;
+}
+
 @media (min-width: 640px) {
   .banner-container {
     height: 14rem;
   }
   .banner-title {
     padding: 0;
+  }
+
+  .banner-title h1 {
+    font-size: 48px;
+    color: white;
   }
 }
 
@@ -93,10 +104,13 @@ ul,li {
 
 .dropdown-title {
   color: white;
-  font-size: 19px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.dropdown-title h2 {
+  font-size: 13px;
 }
 
 .dropdown-icon {
@@ -114,6 +128,12 @@ ul,li {
 .dropdown-text {
   color: #ff6060;
   font-size: 19px;
+}
+
+@media (min-width: 640px) {
+  .dropdown-title h2 {
+    font-size: 18px;
+  }
 }
 
 /* Footer Component */
@@ -208,6 +228,7 @@ ul,li {
 .header-container {
   margin: 0 auto;
   padding: 1.25rem 1.25rem;
+  max-width: 1440px;
 }
 
 .header-logo-container {
@@ -283,14 +304,14 @@ ul,li {
   color: white;
   padding: 0.125rem 0.5rem;
   border-radius: 1rem;
-  font-size: 19px;
+  font-size: 10px;
   display: inline;
 }
 
 @media (min-width: 640px) {
   .tag-container {
     padding: 0.125rem 1.25rem;
-    font-size: 1rem;
+    font-size: 19px;
   }
 }
 
@@ -299,6 +320,7 @@ ul,li {
   margin: 0 auto;
   padding: 1.25rem;
   margin-bottom: 1.5rem;
+  max-width: 1440px;
 }
 
 .accomodation-info {
@@ -409,6 +431,8 @@ ul,li {
 /* About Page */
 .about-container {
   padding: 1.25rem;
+  margin: 0 auto;
+  max-width: 1440px;
 }
 
 .dropdown-spacing {
@@ -426,6 +450,7 @@ ul,li {
   padding-top: 7rem;
   padding-bottom: 7rem;
   color: #ff6060;
+  max-width: 1440px;
 }
 
 .e404-title {
@@ -468,6 +493,7 @@ ul,li {
 .home-container {
   padding: 1.25rem;
   margin: 0 auto;
+  max-width: 1440px;
 }
 
 .cards-container {
